@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\IndexController::class, 'index'])->name('home');
+
+Route::get('/kcrm', [App\Http\Controllers\kcrmController::class, 'kcrm'])->name('kcrm');
+
+Route::get('/', function (){
+    return view('logout');
+});
