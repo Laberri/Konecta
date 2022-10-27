@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kcrm;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Return_;
 
 class KcrmController extends Controller
 {
@@ -12,13 +13,15 @@ class KcrmController extends Controller
      *
      * @return void
      */
-    public function index(Request $request)
+    public function kcrm()
     {
-        if ($request)
         {
-            $query=trim($request->get('searchdate'));
-            $kcrm=DB::table('kcrm')
-            return view('')
+            $kcrms= Kcrm::table('kcrms')
+                    ->select('kcrms.*')
+                    ->orderby('idKCRM','DESC')
+                    ->get();
+
+            return view('kcrms') ->with('kcrms', $kcrms);
         }
     }
     /**
@@ -26,12 +29,8 @@ class KcrmController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function kcrm()
-    {
-        return view('kcrm');
-    }
+   
 
  
-    }
 }
 

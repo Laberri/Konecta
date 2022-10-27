@@ -1,4 +1,4 @@
-@extends('layouts.app')
+
 
 <!DOCTYPE html>
 <html lang= es>
@@ -6,15 +6,45 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Gestor</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <form class="row gy-2 gx-3 align-items-center">
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingInput">Name</label>
+    <input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe">
+  </div>
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+    <div class="input-group">
+      <div class="input-group-text">@</div>
+      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+    </div>
+  </div>
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+    <select class="form-select" id="autoSizingSelect">
+      <option selected>Choose...</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+      <label class="form-check-label" for="autoSizingCheck">
+        Remember me
+      </label>
+    </div>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
         
         <script src="" async defer></script>
     </body>
