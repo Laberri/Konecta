@@ -22,6 +22,7 @@ class CreateKcrmsTable extends Migration
             $table->text('Descripcion')->nullable();
             $table->string('Fecha_Gestion',25)->nullable();
             $table->string('Gestor',25)->nullable();
+            $table->timestamp('created_at');
         });
     }
 
