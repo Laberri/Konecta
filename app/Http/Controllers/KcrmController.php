@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kcrm;
 use Illuminate\Http\Request;
+use App\Models\Kcrm;
+use hash;
 use PhpParser\Node\Stmt\Return_;
 
 class KcrmController extends Controller
@@ -13,29 +14,28 @@ class KcrmController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Kcrm $kcrm)
     {
         $this->middleware('auth');
+        $this->modelkcrm=$kcrm;
     }
 
     public function kcrm()
     {
         {
-            $kcrms= Kcrm::table('kcrms')
-                    ->select('kcrms.*')
+            $kcrms= $this->modelkcrm
+                    ->select('*')
                     ->orderby('idKCRM','DESC')
                     ->get();
-
-            return view('kcrms') ->with('kcrms', $kcrms);
+            return view('kcrm') ->with(['kcrm'=> $kcrms]);
         }
     }
+
+
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
-     */
+    */
    
-
- 
 }
-

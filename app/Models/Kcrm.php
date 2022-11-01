@@ -9,7 +9,8 @@ class Kcrm extends Model
 {
     use HasFactory;
 
-protected $primarykey="idKCRM";
+protected $primarykey = "idKCRM";
+protected $table = "kcrm";
 protected $fillable = [
     'idKCRM',
     'Cedula',
