@@ -1,0 +1,10 @@
+nav {
+        display: flex;
+        background: #811239
+}
+
+nav li{
+
+    padding: 20px;
+    list-style: none;
+}

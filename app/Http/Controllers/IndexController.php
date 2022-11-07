@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kcrm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -25,4 +27,6 @@ class IndexController extends Controller
     {
         return view('home');
     }
+
+    
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KcrmController;
 use App\Models\Kcrm;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+    Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\IndexController::class, 'index'])->name('home');
 
@@ -23,3 +24,5 @@ Route::get('/kcrm', [App\Http\Controllers\kcrmController::class, 'kcrm'])->name(
 Route::get('/', function (){
     return view('logout');
 });
+
+Route::get('/kcrm/kcrmExport', [KcrmController::class, 'exportEcxel']);

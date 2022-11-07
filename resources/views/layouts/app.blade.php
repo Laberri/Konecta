@@ -9,14 +9,16 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.13.2/jquery-ui.theme.css">
     <script src="jquery-ui-1.13.2/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.13.2/jquery-ui.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="jquery-ui-1.13.2/jquery-ui.theme.css">
-    <link rel="stylesheet" type="text/css" href="jquery-ui-1.13.2/jquery-ui.css">
+    
+    
 
     <!-- Styles -->
     <link href="asset('css/app.css')" rel="stylesheet">
@@ -26,7 +28,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <h1>Konecta</h1>
+                <h1>
+                    <a class="nav-link" href="{{ route('home') }}">{{ __('Konecta') }}</a>
+                </h1>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->

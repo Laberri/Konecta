@@ -13,7 +13,7 @@ class CreateKcrmsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kcrms', function (Blueprint $table) {
+        Schema::create('kcrm', function (Blueprint $table) {
             $table->id();
             $table->string('Cedula',25)->nullable();
             $table->string('Nombre',45)->nullable();
@@ -33,6 +33,6 @@ class CreateKcrmsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kcrms');
+        Schema::dropIfExists('kcrm');
     }
 }
