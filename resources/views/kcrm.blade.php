@@ -2,14 +2,12 @@
 @section('title')
 @section('content')
 
-
     <h2 class="text-center">Descarga de Sucesos</h2>
-    <br>
     <nav class="navbar bg-light">
         <div class="container">
-            <form class="form-inline my-2 my-lg-0 float-right">
-                <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Fecha" arial label="search" value="{{ $buscarpor }}">
-                <button class="btn btn-outline-succes my-2 my-sm-0" type="submit">Buscar</button>
+            <form class="d-flex">
+                <input name="buscarpor" class="form-control me-sm-2" type="search" placeholder="Fecha" arial label="search" value="{{ $buscarpor }}">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
             </form>
             
         </div>
@@ -52,4 +50,5 @@
             <div class="col.md-2">
                 <a href="{{url('/kcrm/kcrmExport')}}" class="btn btn-success">Exportar a Excel</a>
             </div>
+
 @endsection
