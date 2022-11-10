@@ -21,6 +21,7 @@
 
     <!-- Styles -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../IMG/icon-estrella.png" type="image/x-icon">
 
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="{{asset('css/sidebar.css')}}">

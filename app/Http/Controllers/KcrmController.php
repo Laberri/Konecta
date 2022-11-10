@@ -9,21 +9,17 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Kcrm;
 use hash;
 use PhpParser\Node\Stmt\Return_;
-
+use PHPUnit\Util\Test;
 
 class KcrmController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct(Kcrm $kcrm)
     {
         $this->middleware('auth');
         $this->modelkcrm = $kcrm;
     }
 
+    /** Función para exportar la base de datos de mysql */
     public function kcrm(Request $request)
     {
         $kcrm = $this->modelkcrm;
@@ -32,12 +28,13 @@ class KcrmController extends Controller
         return view('kcrm', ['kcrm' => $kcrm, 'buscarpor' => $buscarpor]);
     }
 
+    /** Función para exportar a Excel */
     public function exportEcxel()
     {
-        return Excel::download(new kcrmExport, 'Exportableecxel.xlsx');
+        return Excel::download(new kcrmExport, 'Exportable.xlsx');
     }
-
-
+        
+    
     /**
      * Show the application dashboard.
      *

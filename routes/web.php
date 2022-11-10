@@ -15,14 +15,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+    /** Autenticación */
     Auth::routes();
 
+    /** Ruta Home/inicio */
 Route::get('/home', [App\Http\Controllers\IndexController::class, 'index'])->name('home');
 
+    /** Ruta de la base de datos */
 Route::get('/kcrm', [App\Http\Controllers\kcrmController::class, 'kcrm'])->name('kcrm');
 
+    /** Ruta para el cierre de cesión */
 Route::get('/', function (){
     return view('logout');
 });
 
+    /** Ruta para la exportación del contenido de la tabla en excel */
 Route::get('/kcrm/kcrmExport', [KcrmController::class, 'exportEcxel']);
+
+

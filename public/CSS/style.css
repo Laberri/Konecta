@@ -1,3 +1,4 @@
+/* Título KCRM */
 h2{
     text-align: center;
     color: rgb(14, 14, 17);
@@ -5,17 +6,19 @@ h2{
     font-size: 40px;
 }
 
+/* Imagen de autenticación */
 .imagen {
     width: 100%;
     height: 600%;
     margin: 0;
-    background:url(../IMG/img6.jpg);
+    background:url(../IMG/img1.jpg);
     min-height: 82vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
+/* Despedida */
 .imagen>p {
     text-align: center;
     color: black;
@@ -23,6 +26,14 @@ h2{
     font-size: 60px;
 }
 
+.imagen>p.por{
+    text-align: center;
+    color: rgb(153, 147, 147);
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+/* Mensaje de inicio */
 .inicio {
     text-align: left;
     height: 200px; 
@@ -32,15 +43,14 @@ h2{
     font-style: italic;
     color: rgb(90, 90, 90);
     font-weight: lighter;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .exito {
     text-align: right;
-    height: 80px; 
+    height: 0px; 
     width: 800px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: lighter;
-    letter-spacing: 6px;
-
+    letter-spacing: 7px;
 }
